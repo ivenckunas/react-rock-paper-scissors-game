@@ -1,17 +1,16 @@
 import React, { useState } from 'react'
 
-function ColorMap() {
+function ColorMap({ color }) {
 
   const [getColor, setColor] = useState("white")
 
-
   const changeColor = () => {
-    setColor()
+    setColor(color.hex)
   }
 
 
   return (
-    <div onClick={changeColor} className='box' style={{ backgroundColor: setColor.hex }}></div >
+    <div onClick={changeColor} className='box' style={{ backgroundColor: getColor }}></div >
   )
 }
 
